@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Secret</title>
 </head>
 <body>
@@ -24,9 +25,46 @@
             <button class='buttons' id="add_quote_btn">Add New Quote</button>
             <img src="" alt="Quotes Image Here">
         </div>
+        <div class="date_container containers">
+            <h1>Add Dates Here</h1>
+            <button class='buttons' id="add_date_btn">Add New Date</button>
+            <img src="" alt="Date Image Here">
+        </div>
     </div>
-    <div class="below_container">
-        <h1 style="color: #FFFFFF">This is Below Container</h1>
+
+    <div class="memories_menu" style="display:none;">
+        <div class="memories_gui">
+            <h1 style="color: #FFFFFF">Memories Menu</h1>
+            <input type="text" id="memories_url_input" placeholder="Image URL">
+            <button id="memories_add_btn">Add Memory</button>
+            <button class="return_main_btn">Return to main</button>
+        </div>
+
+        <div class="memories_gallery" id="memories_gallery">
+        </div>
+    </div>
+
+    <div class="in_games_menu" style="display:none;">
+        <h1 style="color: #FFFFFF">In-Game Menu</h1>
+        <input type="text" id="in_games_url_input" placeholder="Image URL">
+        <button id="in_games_add_btn">Add In-Game</button>
+        <button class="return_main_btn">Return to main</button>
+
+        
+    </div>
+
+    <div class="quotes_menu" style="display:none;">
+        <h1 style="color: #FFFFFF">Quotes Menu</h1>
+        <input type="text" id="quotes_url_input" placeholder="Image URL">
+        <button id="quotes_add_btn">Add Quote</button>
+        <button class="return_main_btn">Return to main</button>
+    </div>
+
+    <div class="dates_menu" style="display:none;">
+        <h1 style="color: #FFFFFF">Dates Menu</h1>
+        <input type="text" id="dates_url_input" placeholder="Image URL">
+        <button id="dates_add_btn">Add Date</button>
+        <button class="return_main_btn">Return to main</button>
     </div>
     
 </body>
