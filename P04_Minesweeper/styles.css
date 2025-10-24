@@ -1,0 +1,83 @@
+body {
+    background-color: #181a1b;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 45px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    background-color: #464f56;
+    border: 5px solid #1e262e;
+    max-width: 500px;
+    flex: 1 1 auto;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    background-color: #454c54;
+    border: 5px solid #788088;
+    margin: 5px;
+    padding: 6px;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 10%;
+}
+.scoreboard h1 {
+    border: 5px solid #61686f;
+    background-color: #010001;
+    color: #cd0000;
+    padding: 2px;
+}
+
+#restart_btn {
+    aspect-ratio: 1;
+    height: 90%;    
+    padding: 4px;
+    border: 5px outset #798088;
+    background-color: #010001;
+}
+
+#restart_btn:active {
+    transform: scale(.95);
+    border: 5px inset #798088;
+}
+
+#smiley {
+    height: 5em;
+}
+
+.gameboard {    
+    background-color: #454c54;
+    border: 10px solid #1e262e;
+    min-height: 0;
+    margin: 0px 5px 5px;
+    display: grid;
+    gap: 3px;
+}
+
+.tile {
+    background-color: #4c545d;
+    border: 3px outset #798088;
+    aspect-ratio: 1;
+}
+
+.tile:hover {
+    background-color: #3b434c;
+}
+
+.tile:active {
+    border: 3px inset #798088;
+}
