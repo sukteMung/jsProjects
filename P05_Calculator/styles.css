@@ -31,6 +31,9 @@
 
 #curr_calc {
     height: 65%;
+    color: white;
+    font-size: 5rem;
+    text-align: end;
 }
 
 .buttons_container {
@@ -49,6 +52,10 @@
     cursor: pointer;
     color: white;
     font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
 }
 
 .misc_btn {
@@ -84,4 +91,10 @@
 
 .operator_btn:active {
     background-color: #cc6000;
+}
+
+#backspace {
+    justify-self: center;
+    align-self: center;
+    width: 80%;
 }
