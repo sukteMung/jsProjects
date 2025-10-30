@@ -1,0 +1,45 @@
+body {
+    justify-items: center;
+    background-color: #EBD4CC;
+}
+.containers {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    margin: 5px;
+    border: 3px solid #514945;
+    border-radius: 20px;
+    height: 25vh;
+}
+
+.select_container {
+    background-color: #D55C5A;
+    width: 25%;
+    height: 20vh;
+}
+.accounts_container {
+    background-color: #894242;
+    height: auto;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.cards {
+    background-color: #F5918F;
+    min-height: 25vh;
+    width: 24%;
+    margin: 25px 50px;
+    border: 2px solid #514945;
+    text-align: center;
+}
+.buttons_container {
+    background-color: #894242;  
+    width: 90%;
+    height: auto;
+}
+
+.buttons {
+    margin: 10px;
+    height: 15vh;
+    width: 15%;
+}
