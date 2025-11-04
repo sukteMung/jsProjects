@@ -1,0 +1,13 @@
+input::placeholder {
+    color: #242424
+}
+
+input {
+    background-color: #c53d3d;
+    width: 30%;
+}
+
+h1 {
+    color: #c53d3d;
+    padding: 10px
+}
