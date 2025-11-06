@@ -2,7 +2,7 @@ function PlayerCard() {
   return (
     <div
       className="card"
-      style={{ width: "18rem", backgroundColor: "#c53d3d" }}
+      style={{ width: "18rem", backgroundColor: "#FF595E" }}
     >
       <img src="..." className="card-img-top" alt="icon" />
       <div className="card-body">
@@ -10,7 +10,11 @@ function PlayerCard() {
         <a
           href="#"
           className="btn btn-primary"
-          style={{ backgroundColor: "#db1818ff", border: "none" }}
+          style={{
+            backgroundColor: "#E1E6E1",
+            border: "none",
+            color: "#000000",
+          }}
         >
           Update!
         </a>

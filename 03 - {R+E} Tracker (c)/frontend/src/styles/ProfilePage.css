@@ -1,6 +1,13 @@
 body {
-    background-color: #270303;
-    padding: 100px;
+    background-color: #7C3238;
+    padding: 25px;
     display: flex;
     justify-content: center;
+}
+
+.profile {
+    background-color: #080F0F;
+    border-radius: 20px;
+    padding: 20px;
+    height: calc(100vh - 50px);
 }

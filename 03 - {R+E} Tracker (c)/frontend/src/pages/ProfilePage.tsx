@@ -5,9 +5,11 @@ import "../styles/ProfilePage.css";
 function ProfilePage() {
   return (
     <>
-      <PlayerCard />
-      <PlayerNav />
-      <PlayerRanked />
+      <div className="profile">
+        <PlayerCard />
+        <PlayerNav />
+        <PlayerRanked />
+      </div>
     </>
   );
 }

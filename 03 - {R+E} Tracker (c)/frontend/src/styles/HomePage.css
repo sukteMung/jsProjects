@@ -1,13 +1,26 @@
+body {
+    background-color: #080F0F;
+}
+
 input::placeholder {
     color: #242424
 }
 
 input {
     background-color: #c53d3d;
-    width: 30%;
+    width: 55%;
+    height: 50%;
 }
 
 h1 {
     color: #c53d3d;
     padding: 10px
+}
+
+button {
+    background-color: #c53d3d;
+    border-radius: 10px;
+    width: 40%;
+    height: 45%;
+    margin-left: 20px;
 }
