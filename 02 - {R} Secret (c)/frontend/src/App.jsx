@@ -1,47 +1,33 @@
 import { useNavigate } from "react-router-dom";
+import bg from "./assets/bg.png";
 
 export default function App() {
   const nav = useNavigate();
-
+  const pages = ["ImagesPage", "QuotesPage"];
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 px-4">
+    <div className="h-screen w-screen relative flex flex-col justify-center items-center px-4">
+      {/* Background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center -z-10 opacity-80"
+        style={{ backgroundImage: `url(${bg})` }}
+      />
 
-      Title box
-      <div className="text-3xl font-bold bg-white px-10 py-6 rounded-xl shadow-md mb-10 text-center">
-        Welcome to My App
+      {/* Title */}
+      <div className="text-8xl font-bold px-10 py-6 rounded-xl mb-10 text-center text-white opacity-75">
+        L and L's memories!
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-col gap-4 w-full max-w-xs">
-        <button
-          className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-          onClick={() => nav("/a")}
-        >
-          Go to Page A
-        </button>
-
-        <button
-          className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-          onClick={() => nav("/b")}
-        >
-          Go to Page B
-        </button>
-
-        <button
-          className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-          onClick={() => nav("/c")}
-        >
-          Go to Page C
-        </button>
-
-        <button
-          className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-          onClick={() => nav("/d")}
-        >
-          Go to Page D
-        </button>
+      <div className="flex flex-col gap-4 w-full max-w-xs bg-white p-6 rounded-xl shadow-md">
+        {pages.map((page) => (
+          <button 
+            key={page}
+            className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            onClick={() => nav(`/${page}.jsx`)}>
+            Go to Page {page.toUpperCase()}
+            </button>
+        ))}
       </div>
-
     </div>
   );
 }

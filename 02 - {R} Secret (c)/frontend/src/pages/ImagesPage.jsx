@@ -1,3 +1,7 @@
+import Title from "../components/Title";
+
 export default function ImagesPage() {
-    return <></>;
+    return (
+        <Title pageName="Images Page" />
+    );
 }
