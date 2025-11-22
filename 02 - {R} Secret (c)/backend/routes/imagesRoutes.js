@@ -1,5 +1,5 @@
 import express from "express";
-import { db, __COLLECTION__ } from "./firestore.js";
+import { db, __COLLECTION__ } from "../firestore.js";
 
 const router = express.Router();
 
@@ -22,3 +22,5 @@ router.get("/", async (req, res) => {
         res.status(500).json("Error while fetching images");
     }
 });
+
+export default router;

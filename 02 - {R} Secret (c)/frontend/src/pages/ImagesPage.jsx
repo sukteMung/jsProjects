@@ -1,19 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import ImageModal from "../components/ImageModal";
 
 export default function ImagesPage() {
+    const [images, setImages] = useState([]);
     const [selectedImage, setSelectedImage] = useState(null);
 
-    // TEMP hardcoded images (replace with Firebase images later)
-    const images = [
-        "https://cdn.discordapp.com/attachments/1359048941357760532/1427175404657049701/image.png?ex=6921fb6c&is=6920a9ec&hm=b4afb6e976b6cd5741b4ce5f0f506b32cd9323081643f84c2836f74557da7642&",
-        "https://cdn.discordapp.com/attachments/1359048941357760532/1413237218922991798/image.png?ex=69220839&is=6920b6b9&hm=7b69d983f144dbb053c832dbeb26de99367b252f797e2ac69e89ac45a9b3f906&",
-        "https://via.placeholder.com/600x300",
-        "https://via.placeholder.com/600x350",
-        "https://via.placeholder.com/600x420",
-        "https://via.placeholder.com/600x380",
-    ];
+    // Fetch images on load
+    useEffect(() => {
+        fetch("http://localhost:3000/images")
+            .then((res) => res.json())
+            .then((data) => setImages(data))
+            .catch((err) => console.error("Error fetching images:", err));
+    }, []);
 
     return (
         <div className="min-h-screen min-w-full flex" style={{ backgroundColor: "#8895B3" }}>
