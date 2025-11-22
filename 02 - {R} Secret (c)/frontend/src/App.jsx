@@ -20,12 +20,12 @@ export default function App() {
       {/* Buttons */}
       <div className="flex flex-col gap-4 w-full max-w-xs bg-white p-6 rounded-xl shadow-md">
         {pages.map((page) => (
-          <button 
+          <button
             key={page}
             className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-            onClick={() => nav(`/${page}.jsx`)}>
+            onClick={() => nav(`/${page}`)}>
             Go to Page {page.toUpperCase()}
-            </button>
+          </button>
         ))}
       </div>
     </div>
