@@ -19,7 +19,7 @@ export default function NavBar({ pageName }) {
         <div
             className="sticky top-0 z-50 flex justify-between items-center px-6 py-3 rounded-xl shadow-md"
             style={{
-                width: "50%",
+                width: "65%",
                 margin: "0 auto",          // centers the navbar
                 backgroundColor: navBg,    // navbar background only
                 border: `5px outset ${outline}`,
@@ -32,13 +32,14 @@ export default function NavBar({ pageName }) {
                     <button
                         key={tab.label}
                         onClick={() => nav(tab.path)}
-                        className="px-6 py-2 text-xl font-semibold rounded-lg transition-all duration-200"
+                        className="px-6 py-2 text-xl font-semibold rounded-lg
+                        hover:brightness-90 
+                        hover:border-inset
+                        "
                         style={{
                             backgroundColor: isSelected ? btnBgSelected : btnBg,
                             color: "white",
-                            border: isSelected ? `2px outset ${outline}` : `2px inset ${outline}`,
-                            transform: isSelected ? "scale(1.05)" : "scale(1.0)",
-                            boxShadow: isSelected ? "0 0 10px rgba(0,0,0,0.3)" : "none",
+                            border: isSelected ? `2px inset ${outline}` : `2px outset ${outline}`,
                         }}
                     >
                         {tab.label}
